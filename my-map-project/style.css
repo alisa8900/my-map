@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+}
+
+#map {
+    height: 600px;
+    width: 100%;
+    margin-top: 20px;
+    border: 2px solid #dc9252;
+    border-radius: 10px;
+}
+
+.popup-video {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+.vertical-video-container {
+    width: 270px;  /* Ширина контейнера */
+    height: 480px; /* Высота под 3:4 */
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
