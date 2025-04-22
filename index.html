@@ -1,73 +1,54 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Интерактивная карта с видео</title>
+    <title>Best with the bestie</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-        .header {
+            font-family: 'Arial', sans-serif;
+            background: #fff5f5;
             text-align: center;
-            margin-bottom: 30px;
+            padding: 20px;
+        }
+        h1 {
+            color: #ff6b88;
+            font-size: 2.5em;
         }
         .video-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
+            margin: 30px auto;
+            max-width: 800px;
         }
         .video-item {
             background: white;
-            border-radius: 10px;
+            border-radius: 15px;
             padding: 15px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            width: 100%;
-            max-width: 600px;
-        }
-        .video-item h3 {
-            margin-top: 0;
-            color: #333;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(255,107,136,0.2);
         }
         video {
             width: 100%;
-            border-radius: 5px;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Моя интерактивная карта</h1>
-        <p>Добро пожаловать! Здесь вы можете посмотреть наши видео.</p>
-    </div>
-
+    <h1>best with the bestie</h1>
+    
     <div class="video-container">
-        <!-- Видео 1 -->
         <div class="video-item">
-            <h3>Первое видео</h3>
-            <video controls>
+            <h2>second cup</h2>
+            <video controls poster="https://via.placeholder.com/800x450?text=First+Video">
                 <source src="https://drive.google.com/uc?export=download&id=1TvEpaU7t1VgIKyDpwzxE0J0RB6gmWDtf" type="video/mp4">
-                Ваш браузер не поддерживает видео.
             </video>
+            <p>Предупрежден...</p>
         </div>
 
-        <!-- Видео 2 -->
         <div class="video-item">
-            <h3>Второе видео</h3>
-            <video controls>
+            <h2>В действии</h2>
+            <video controls poster="https://via.placeholder.com/800x450?text=Second+Video">
                 <source src="https://drive.google.com/uc?export=download&id=1h7lGbYucJ8DNZRLmajoul2nGf7AhSGbO" type="video/mp4">
-                Ваш браузер не поддерживает видео.
             </video>
+            <p>Наши лучшие моменты</p>
         </div>
     </div>
-
-    <script>
-        // Можно добавить JavaScript для интерактивности
-        console.log("Страница загружена!");
-    </script>
 </body>
 </html>
