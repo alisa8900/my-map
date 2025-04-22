@@ -4,102 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MY MAP</title>
+    <!-- Подключаем Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-        }
-        h1 {
-            color: #ff6b88;
-            margin-bottom: 20px;
-        }
-        #map {
-            height: 500px;
-            width: 100%;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        .video-popup {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.9);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-        }
-        .video-container {
-            width: 90%;
-            max-width: 800px;
-        }
-        .close-btn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            color: white;
-            font-size: 30px;
-            cursor: pointer;
-        }
-    </style>
+    <!-- Ваши стили -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>best with the bestie</h1>
     <div id="map"></div>
     
-    <!-- Попап для видео -->
-    <div class="video-popup" id="videoPopup">
-        <span class="close-btn" onclick="closeVideo()">×</span>
-        <div class="video-container">
-            <video id="popupVideo" controls width="100%"></video>
-        </div>
-    </div>
-
+    <!-- Подключаем Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script>
-        // Инициализация карты
-        const map = L.map('map').setView([55.751244, 37.618423], 13);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
-
-        // Ваши метки с видео
-        const markers = [
-            {
-                lat: 55.751244,
-                lng: 37.618423,
-                title: "Наше первое место",
-                videoId: "1TvEpaU7t1VgIKyDpwzxE0J0RB6gmWDtf"
-            },
-            {
-                lat: 55.758163,
-                lng: 37.620407,
-                title: "Лучшие моменты",
-                videoId: "1h7lGbYucJ8DNZRLmajoul2nGf7AhSGbO"
-            }
-        ];
-
-        // Добавляем метки на карту
-        markers.forEach(marker => {
-            L.marker([marker.lat, marker.lng])
-                .addTo(map)
-                .bindPopup(`<b>${marker.title}</b><br><button onclick="openVideo('${marker.videoId}')">Смотреть видео</button>`);
-        });
-
-        // Функции для работы с видео
-        function openVideo(videoId) {
-            document.getElementById('popupVideo').src = 
-                `https://drive.google.com/uc?export=download&id=${videoId}`;
-            document.getElementById('videoPopup').style.display = 'flex';
-        }
-
-        function closeVideo() {
-            document.getElementById('videoPopup').style.display = 'none';
-            document.getElementById('popupVideo').pause();
-        }
-    </script>
+    <!-- Ваш скрипт -->
+    <script src="script.js"></script>
 </body>
 </html>
