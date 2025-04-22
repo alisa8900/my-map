@@ -3,19 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MY MAP</title>
-    <!-- Подключаем Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-    <!-- Ваши стили -->
-    <link rel="stylesheet" href="style.css">
+    <title>Интерактивная карта с видео</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .video-item {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+        .video-item h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        video {
+            width: 100%;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-    <h1>best with the bestie</h1>
-    <div id="map"></div>
-    
-    <!-- Подключаем Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <!-- Ваш скрипт -->
-    <script src="script.js"></script>
+    <div class="header">
+        <h1>Моя интерактивная карта</h1>
+        <p>Добро пожаловать! Здесь вы можете посмотреть наши видео.</p>
+    </div>
+
+    <div class="video-container">
+        <!-- Видео 1 -->
+        <div class="video-item">
+            <h3>Первое видео</h3>
+            <video controls>
+                <source src="https://drive.google.com/uc?export=download&id=1TvEpaU7t1VgIKyDpwzxE0J0RB6gmWDtf" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+        </div>
+
+        <!-- Видео 2 -->
+        <div class="video-item">
+            <h3>Второе видео</h3>
+            <video controls>
+                <source src="https://drive.google.com/uc?export=download&id=1h7lGbYucJ8DNZRLmajoul2nGf7AhSGbO" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+        </div>
+    </div>
+
+    <script>
+        // Можно добавить JavaScript для интерактивности
+        console.log("Страница загружена!");
+    </script>
 </body>
 </html>
